@@ -8,17 +8,17 @@ MQTT protocol is based on top of TCP/IP and both the client and broker need to h
 
 Below is the snapshot of a subscribe followed by a publish to the same MQTT broker using Wireshark tool from the Catchpoint MQTT monitor. We will be considering a message with the delivery level of QoS t0 here. Let’s dive into a packet-by-packet analysis of the protocol.
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.001.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.001.png?raw=true)
 
 1. With wireshark, capture the MQTT communication packets and to display the [**flow graph**] **for publish message**, explain the messages exchanged between the client and the broker.
 
-| <p>![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.002.jpeg)</p><p>![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.003.jpeg)</p><p>[**flow graph**]</p> | ![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.004.png) |
-| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------- |
+| <p>![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.002.jpeg)</p><p>![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.003.jpeg)</p><p>[**flow graph**]</p> | ![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.004.png?raw=true) |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------- |
 
 1. Do the same thing with **MQTT subscribe** and display the exchanged messages.
 1. Display and describe the content of MQTT message formats :
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.005.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.005.png?raw=true)
 
 Use this link to be helped:
 
@@ -44,20 +44,20 @@ Please follow the following steps to know how to add username and password to mo
 
 cd /etc/mosquitto
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.006.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.006.png?raw=true)
 5)Now please execute the following command to create username and password file which is shown below.
 
 sudo mosquitto_passwd -c /etc/mosquitto/pass test
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.007.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.007.png?raw=true)
 6)Now please enter the password. you can enter anything as your password which is shown below.
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.008.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.008.png?raw=true)
 
 7)Now please execute the following command to check the created username and password file which is shown below
 
 ls
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.009.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.009.png?raw=true)
 
 8)Now please execute the following command to modify mosquitto.conf file
 
@@ -68,27 +68,27 @@ sudo nano mosquitto.conf
 allow_anonymous false
 password_file /etc/mosquitto/pass
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.010.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.010.png?raw=true)
 10)Now we need to restart mosquitto. Now please execute the following command to stop the mosquitto which is shown below.
 
 sudo service mosquitto stop
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.011.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.011.png?raw=true)
 11)Now please execute the following command to start the mosquitto which is shown below.
 
 sudo service mosquitto start
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.012.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.012.png?raw=true)
 12)Now please execute the following command to publish data from the terminal using username and password which is shown below.
 
 mosquitto_pub -t test -u test -P test -m hi
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.013.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.013.png?raw=true)
 13)Now please execute the following command to publish data from the terminal using the wrong username and password and you will get the connection was refused error because username and password are wrong which is shown below.
 
 mosquitto_pub -t test -u test -P tet -m hi
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.014.png)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.014.png?raw=true)
 Please click on the below link to become master in MQTT.
 
 2. # Mosquitto SSL Configuration -MQTT TLS Security
@@ -117,7 +117,7 @@ will create an **encrypted connection** between the MQTT broker and the MQTT cli
 
 ![create-ca-key](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.015.jpeg)
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.016.png)![create-ca-certificate](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.017.jpeg)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.016.png?raw=true)![create-ca-certificate](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.017.jpeg)
 
 ![create-server-key](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.018.jpeg)
 
@@ -127,7 +127,7 @@ will create an **encrypted connection** between the MQTT broker and the MQTT cli
 
 ![mosquitto-conf-tls](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.021.jpeg)
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.022.png)![tls-test-script](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.023.jpeg)
+![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.022.png?raw=true)![tls-test-script](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.023.jpeg)
 
 ![ca-common-name-error](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.024.jpeg)
 
