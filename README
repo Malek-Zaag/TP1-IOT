@@ -8,7 +8,7 @@ MQTT protocol is based on top of TCP/IP and both the client and broker need to h
 
 Below is the snapshot of a subscribe followed by a publish to the same MQTT broker using Wireshark tool from the Catchpoint MQTT monitor. We will be considering a message with the delivery level of QoS t0 here. Let’s dive into a packet-by-packet analysis of the protocol.
 
-![](https://github.com/Malek-Zaag/TP1-IOT/blob/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.001.png?raw=true)
+![](https://raw.githubusercontent.com/Malek-Zaag/TP1-IOT/main/Images/Aspose.Words.c14b6788-9728-4dff-aae2-6e40713df1b2.001.png)
 
 1. With wireshark, capture the MQTT communication packets and to display the [**flow graph**] **for publish message**, explain the messages exchanged between the client and the broker.
 
